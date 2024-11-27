@@ -1,8 +1,8 @@
 <?php
 // Include the Smarty class
-require 'includes/db.php';
-require 'vendor/smarty/smarty/libs/Smarty.class.php';
-require 'src/Patient.php';            
+require '../includes/db.php';
+require '../vendor/smarty/smarty/libs/Smarty.class.php';
+require 'Patient.php';            
 
 
 use Smarty\Smarty;
@@ -46,5 +46,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 // Display the form.tpl template
-$smarty->display('add_form.tpl');
+$smarty->display('../templates/add_form.tpl');
 ?>

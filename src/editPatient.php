@@ -3,9 +3,9 @@
 
 use Smarty\Smarty;
 
-require 'includes/db.php';
-require 'vendor/smarty/smarty/libs/Smarty.class.php';
-require 'src/Patient.php';            
+require '../includes/db.php';
+require '../vendor/smarty/smarty/libs/Smarty.class.php';
+require 'Patient.php';            
 
 // Create a new Smarty instance
 $smarty = new Smarty;
@@ -56,5 +56,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Display the template (this will render the form.tpl)
-$smarty->display('edit_form.tpl');
+$smarty->display('../templates/edit_form.tpl');
 ?>

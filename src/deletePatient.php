@@ -3,8 +3,8 @@
 
 use Smarty\FunctionHandler\Fetch;
 
-require 'includes/db.php';
-require 'src/Patient.php';            
+require '../includes/db.php';
+require 'Patient.php';            
 
 // Check if the 'id' is provided in the URL
 if (isset($_GET['id'])) {

@@ -2,9 +2,9 @@
 
 use Smarty\Smarty;
 
-require 'includes/db.php';
-require 'src/Patient.php';
-require 'vendor/smarty/smarty/libs/Smarty.class.php';
+require '../includes/db.php';
+require 'Patient.php';
+require '../vendor/smarty/smarty/libs/Smarty.class.php';
 
 $smarty = new Smarty();
 $smarty->setTemplateDir(__DIR__ . '/templates');
@@ -42,5 +42,5 @@ $smarty->assign('totalAvgPerDoctor', round($totalAppointmentsPerDoctor));
 $smarty->assign('patients', $patients);
 
 // Render template
-$smarty->display('templates/index.tpl');
+$smarty->display('../templates/index.tpl');
 ?>
