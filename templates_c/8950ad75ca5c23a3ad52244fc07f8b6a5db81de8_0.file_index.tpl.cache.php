@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.2, created on 2024-11-27 16:00:28
+/* Smarty version 5.4.2, created on 2024-11-27 14:23:04
   from 'file:templates/index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.2',
-  'unifunc' => 'content_6747340c77eaa6_74318357',
+  'unifunc' => 'content_67471d38e7cd46_18980059',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8950ad75ca5c23a3ad52244fc07f8b6a5db81de8' => 
     array (
       0 => 'templates/index.tpl',
-      1 => 1732719621,
+      1 => 1732713769,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6747340c77eaa6_74318357 (\Smarty\Template $_smarty_tpl) {
+function content_67471d38e7cd46_18980059 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\Users\\Mouad\\Documents\\Patient management\\templates';
-?><!DOCTYPE html>
+$_smarty_tpl->getCompiled()->nocache_hash = '53574852067471d38e39cb5_46001268';
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthcare Management System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
         body {
             background-color: #f8f9fa;
@@ -78,11 +78,11 @@ $_smarty_current_dir = 'C:\\Users\\Mouad\\Documents\\Patient management\\templat
             <!-- Sidebar -->
             <div class="col-md-2 sidebar">
                 <h3 class="mb-4">MediCore Hospital</h3>
-                <a href="#"><i class="fa-solid fa-house"></i>Dashboard</a>
-                <a href="#"><i class="fa-solid fa-user"></i>Patient Details</a>
-                <a href="#"><i class="fa-solid fa-user-doctor"></i>Doctor Details</a>
-                <a href="#"><i class="fa-regular fa-credit-card"></i>Payment Details</a>
-                <a href="#"><i class="fa-solid fa-compass"></i>E-Channeling</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Patient Details</a>
+                <a href="#">Doctor Details</a>
+                <a href="#">Payment Details</a>
+                <a href="#">E-Channeling</a>
             </div>
 
             <!-- Main Content -->
@@ -94,39 +94,36 @@ $_smarty_current_dir = 'C:\\Users\\Mouad\\Documents\\Patient management\\templat
                     <div class="row mb-4">
                         <div class="col-md-3">
                             <div class="card text-center p-3">
-                                <h5><?php echo $_smarty_tpl->getValue('totalAppointments');?>
-</h5>
+                                <h5>140</h5>
                                 <p>Total Appointments</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card text-center p-3">
-                                <h5><?php echo $_smarty_tpl->getValue('totalPatients');?>
-</h5>
+                                <h5>370</h5>
                                 <p>Total Patients</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card text-center p-3">
-                                <h5>0</h5>
+                                <h5>70</h5>
                                 <p>Total Cancellations</p>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card text-center p-3">
-                                <h5><?php echo $_smarty_tpl->getValue('totalAvgPerDoctor');?>
-</h5>
+                                <h5>120</h5>
                                 <p>Total Avg Per Doctor</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Patient Table -->
-                    <a href="addPatient.php" class="btn btn-primary btn-sm"> <i class="fas fa-plus"></i>Add Appointment</a>
-
                     <div class="card">
                         <div class="card-header">
-                            <input type="text" class="form-control"  placeholder="Search here...">
+                            <h5>Patient Details</h5>
+                            <input type="text" class="form-control" placeholder="Search here...">
+                            <a href="addPatient.php" class="btn btn-primary btn-sm">Add patient</a>
                         </div>
                         <div class="card-body">
                             <table class="table">
@@ -155,7 +152,7 @@ $foreach0DoElse = false;
 </td>
                                         <td><?php echo $_smarty_tpl->getValue('patient')['mobile'];?>
 </td>
-                                        <td><?php echo $_smarty_tpl->getValue('patient')['date'];?>
+                                        <td><?php echo $_smarty_tpl->getValue('patient')['date_of_birth'];?>
 </td>
                                         <td><?php echo $_smarty_tpl->getValue('patient')['doctor'];?>
 </td>
@@ -163,9 +160,9 @@ $foreach0DoElse = false;
 </td>
                                         <td>
                                             <a href="editPatient.php?id=<?php echo $_smarty_tpl->getValue('patient')['id'];?>
-" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+" class="btn btn-warning btn-sm">Edit</a>
                                             <a href="deletePatient.php?id=<?php echo $_smarty_tpl->getValue('patient')['id'];?>
-" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                     <?php
